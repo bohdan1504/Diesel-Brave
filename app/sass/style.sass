@@ -3,19 +3,9 @@
 	display: none
 
 @import "smart-grid.sass"
-@import "fonts.sass"
 @include reset()
 $color-red: crimson
 
-@font-face
-	font-family: Circe
-	src: url('../fonts/Circe-Regural.woff')
-@font-face
-	font-family: Circe Bold
-	src: url('../fonts/Circe-Bold.woff')
-@font-face
-	font-family: Circe ExtraBold
-	src: url('../fonts/Circe-ExtraBold.woff')
 
 body
 	font-family: Circe
@@ -98,12 +88,13 @@ body
 			@include col-lg-5()
 			@include col-xs-12()
 			margin-left: 0px
+			img
+				max-width: 100%
 				
 		&_plus-insert
 			@include col()
 			@include col-2()
 			@include col-xs-12()
-
 			font-size: 150px
 			font-weight: 900
 			margin-top: 180px
@@ -116,6 +107,8 @@ body
 			margin-right: 0
 			div
 				width: 100%
+			img
+				max-width: 100%
 				p
 					text-align: center
 					font-size: 20px
@@ -206,17 +199,12 @@ body
 		width: 100%
 		display: flex
 		flex-wrap: wrap
-		align-items: center
 		&__first, &__second
 			text-align: center
-			display: flex
-			flex-direction: column
-			align-items: center
 			@include col()
 			@include col-4()
 			@include col-md-6()
 			@include col-xs-12()
-
 			h3
 				font-size: 28px
 				font-weight: 900
@@ -225,8 +213,11 @@ body
 			p
 				width: 85%
 				margin: auto
+			img
+				width: 70px
+				height: 41px
 		&__first__top, &__second__top
-			margin-bottom: 30px
+			height: 300px
 				
 
 		&__third
@@ -235,6 +226,11 @@ body
 			@include col-4()
 			@include col-md-12()
 			@include col-xs-12()
+@media screen and (max-width: 610px)
+	.advantages
+		&__both
+			&__first__top, &__second__top
+				height: 330px
 
 /********** CHARACTERISTICS BLOCK **********/
 .characteristics
@@ -276,18 +272,20 @@ body
 		align-self: center
 
 //owlCarousel
+	width: 350px !important
 .block-carousel
 	width: 100%
 	.owl-carousel
 		width: 100%
-	.slide
-		display: block
-		position: relative
-		font-size: 30px
-		font-family: Circe ExtraBold
-		img
-			height: 100%
-			width: 100%
+		.slide
+			display: block
+			position: relative
+			font-size: 30px
+			font-family: Circe ExtraBold
+			.owl-item
+				img
+					height: 350px
+					width: 350px !important
 	.navNext, .navPrev
 	  color: #000
 	  font-size: 46px
@@ -339,15 +337,6 @@ body
 		b
 			text-transform: uppercase
 			font-family: Circe ExtraBold
-	// &__bg
-	// 	position: absolute
-	// 	left: 0
-	// 	z-index: -1
-	// 	width: 100%
-	// 	height: 640px
-	// 	background: url(../img/bg2.jpg) no-repeat
-	// 	background-attachment: fixed
-	// 	background-size: 100% 100%
 	&__playback
 		position: relative
 		padding-bottom: 56.25%
@@ -369,23 +358,28 @@ body
 		text-align: center
 		max-width: 400px
 		button
-				text-transform: uppercase
-				font-family: Circe ExtraBold
-				width: 100%
-				padding: 10px 
-				color: #fff
-				border-radius: 15px
-				background-color: $color-red
-				outline: none
-				border: none
-				font-size: 26px
-				font-weight: 900
-				cursor: pointer
+			text-transform: uppercase
+			font-family: Circe ExtraBold
+			width: 100%
+			padding: 10px 
+			color: #fff
+			border-radius: 15px
+			background-color: $color-red
+			outline: none
+			border: none
+			font-size: 26px
+			font-weight: 900
+			cursor: pointer
+			&:hover
+				background-color: #b51d3b
+				color: #F3F3F3
+				transition: 0.1s background-color
+				transition: 0.1s color
 
 /********** DELIVERY BLOCK **********/
 .delivery	
 	background-color: #ede3d5
-	padding-bottom: 50px
+	padding-bottom: 150px
 	.wrapper
 		display: flex
 		flex-wrap: wrap
@@ -397,13 +391,14 @@ body
 		font-family: Circe Bold
 		font-weight: 900
 		padding: 30px 0
+		margin-bottom: 70px
 	&__item
+		text-align: center
 		@include col()
 		@include col-4()
 		@include col-lg-4()
 		@include col-md-5()
 		@include col-xs-7()
-		text-align: center
 		h3
 			font-size: 24px
 			font-weight: 700
@@ -414,7 +409,7 @@ body
 
 /********** PRESENT BLOCK **********/
 .present
-	padding-bottom: 40px
+	padding-bottom: 50px
 	h1
 		font-size: 40px
 		text-align: center
@@ -435,6 +430,7 @@ body
 			@include col()
 			@include col-10()
 			font-size: 20px
+			margin-top: 50px
 			span
 				margin-left: 30px
 				font-weight: 900
@@ -482,10 +478,12 @@ body
 			background: url('../img/why-us.png')
 			background-size: auto 100px
 			margin: 0 auto
+		.icon1
+			background-position: -3px
 		.icon2
-			background-position: -110px
+			background-position: -113px
 		.icon3
-			background-position: -220px
+			background-position: -221px
 
 /********** REVIEWS BLOCK **********/
 .reviews
@@ -502,15 +500,6 @@ body
 		font-size: 40px
 		font-family: Circe ExtraBold
 		padding: 30px 0
-	// &__bg
-	// 		position: absolute
-	// 		left: 0
-	// 		z-index: -1
-	// 		width: 100%
-	// 		height: 420px
-	// 		background: url(../img/bg3.jpg) no-repeat
-	// 		background-attachment: fixed
-	// 		background-size: 100% 100%
 	&__block
 		display: flex
 		justify-content: center
@@ -530,6 +519,8 @@ body
 				@include col-4()
 				@include col-xs-8()
 				border-radius: 50%
+				height: 100%
+				align-self: center
 			p
 				@include col()
 				@include col-8()
@@ -582,6 +573,7 @@ body
 		text-align: center
 		margin-bottom: 50px
 		h1
+			max-width: 100%
 			font-size: 38px
 			text-transform: uppercase
 			font-weight: 600
@@ -591,6 +583,9 @@ body
 		@include col()
 		@include col-4()
 		@include col-md-10()
+		img
+			max-width: 100%
+			height: 100%
 	&__right	
 		@include col()
 		@include col-8()
@@ -618,6 +613,8 @@ body
 				height: 100px
 				margin-left: -15px
 				margin-top: -8px
+				img
+					max-width: 100%
 			&__pricelist
 				display: flex
 				flex-wrap: wrap
@@ -632,6 +629,7 @@ body
 					@include col-xs-8()
 					text-align: center
 					color: #fff
+					margin-top: auto
 				.cena
 					background-color: #FFF
 					color: #000
@@ -760,7 +758,7 @@ footer
 	// тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =)
 	display: none
 	opacity: 0
-	z-index: 9999
+	z-index: 9999 !important
 	padding: 20px 10px
 	h1
 		font-size: 30px
@@ -893,6 +891,9 @@ footer
 			img
 				width: 250px
 				height: 250px
+		&__first__top, &__second__top
+			height: auto
+			margin-bottom: 30px
 	.characteristics
 		text-align: center
 		&__first_column, &__second_column
@@ -928,10 +929,92 @@ footer
 			&__second
 				img
 					margin: 30px auto
-					width: 250px
-					height: 250px
+					max-width: 100%
+					height: 100%
 			&__third
 				width: 80%
 	.watches
 		img
 			width: 85%
+	#politice
+		overflow-y: scroll
+		width: 100px
+		height: 300px
+		// Рaзмеры дoлжны быть фиксирoвaны
+		border-radius: 5px
+		border: 3px #000 solid
+		background: #fff
+		position: fixed
+		top: 45%
+		// oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт
+		left: 30%
+		margin-top: -150px
+		margin-left: -50px
+		// тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =)
+		display: none
+		opacity: 0
+		z-index: 9999 !important
+		padding: 20px 10px
+
+@media screen and (max-width: 400px)
+	#politice
+		overflow-y: scroll
+		width: 90% !important
+		max-width: 100% !important
+		height: 300px
+		top: 45%
+		left: 0
+		margin-left: 0
+		h1
+			font-size: 25px
+			word-wrap: break-word
+@media screen and (max-width: 340px)
+	.danger
+		&__article
+			h1
+				font-size: 32px
+			
+@media screen and (max-width: 320px)
+	.main-offer__pricelist__price__sale__old-price 
+		.cena 
+			span
+				margin-top: -23px
+				margin-left: -35px
+				width: 70px
+	.main-offer__pricelist__timer
+		margin-left: -25px
+
+.sendmail
+	background-color: $color-red
+	font-family: Circe
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	div
+		text-align: center
+		margin-top: 300px
+		.thanks
+			font-size: 40px
+			color: #fff
+		.operator
+			margin-top: 30px
+			font-size: 26px
+			color: #fff
+		.back_home
+			margin-top: 50px
+			color: #CFCFCF
+			text-decoration: underline
+
+
+
+
+@font-face
+	font-family: Circe
+	src: url('../fonts/Circe-Regular.woff')
+@font-face
+	font-family: Circe Bold
+	src: url('../fonts/Circe-Bold.woff')
+@font-face
+	font-family: Circe ExtraBold
+	src: url('../fonts/Circe-ExtraBold.woff')

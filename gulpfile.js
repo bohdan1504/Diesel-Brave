@@ -25,15 +25,19 @@ gulp.task('sass', function(){
 
 gulp.task('scripts', function(){
     return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js'
+        'app/js/common.js'
     ])
-    .pipe(concat('libs.min.js'))
+    .pipe(concat('common.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js/'))
 });
 
 gulp.task('css-libs', ['sass'], function(){
-    return gulp.src('app/css/libs.css')
+    return gulp.src([
+            'app/css/libs.css',
+            'app/css/animate.css',
+            'app/css/style.css',
+        ])
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'));
@@ -73,9 +77,10 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function(){
     var buildCss = gulp.src([
         'app/css/libs.min.css',
         'app/css/style.css',
-        'app/css/animate.css',
+        'app/css/style.min.css',
+        'app/css/animate.min.css',
         'app/css/owl.theme.default.min.css',
-        'app/css/owl.carousel.css'
+        'app/css/owl.carousel.min.css'
     ])
     .pipe(gulp.dest('dist/css'));
     var buildSass = gulp.src([
@@ -89,8 +94,13 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function(){
     var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('dist/js'));
 
-    var buildHtml = gulp.src('app/*.*')
+    var buildHtml = gulp.src([
+                'app/*.*',
+                'app/.htaccess',
+            ])
         .pipe(gulp.dest('dist'));
+    var buildLibs = gulp.src('app/libs/')
+        .pipe(gulp.dest('dist/'))
 });
 
 gulp.task('default', ['browser-sync', 'css-libs', 'scripts'], function(){

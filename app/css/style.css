@@ -108,21 +108,6 @@ main {
   display: block;
 }
 
-@font-face {
-  font-family: Circe;
-  src: url("../fonts/Circe-Regural.woff");
-}
-
-@font-face {
-  font-family: Circe Bold;
-  src: url("../fonts/Circe-Bold.woff");
-}
-
-@font-face {
-  font-family: Circe ExtraBold;
-  src: url("../fonts/Circe-ExtraBold.woff");
-}
-
 body {
   font-family: Circe;
   overflow-x: hidden;
@@ -288,6 +273,10 @@ body {
   margin-left: 0px;
 }
 
+.main-offer__propose_watch-block img {
+  max-width: 100%;
+}
+
 .main-offer__propose_plus-insert {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -317,12 +306,16 @@ body {
   width: 100%;
 }
 
-.main-offer__propose_portmone div p {
+.main-offer__propose_portmone img {
+  max-width: 100%;
+}
+
+.main-offer__propose_portmone img p {
   text-align: center;
   font-size: 20px;
 }
 
-.main-offer__propose_portmone div p span {
+.main-offer__propose_portmone img p span {
   color: crimson;
   font-size: 26px;
   font-weight: 900;
@@ -476,28 +469,11 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .advantages__both__first,
 .advantages__both__second {
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 15px;
@@ -521,9 +497,15 @@ body {
   margin: auto;
 }
 
+.advantages__both__first img,
+.advantages__both__second img {
+  width: 70px;
+  height: 41px;
+}
+
 .advantages__both__first__top,
 .advantages__both__second__top {
-  margin-bottom: 30px;
+  height: 300px;
 }
 
 .advantages__both__third {
@@ -615,16 +597,16 @@ body {
   width: 100%;
 }
 
-.block-carousel .slide {
+.block-carousel .owl-carousel .slide {
   display: block;
   position: relative;
   font-size: 30px;
   font-family: Circe ExtraBold;
 }
 
-.block-carousel .slide img {
-  height: 100%;
-  width: 100%;
+.block-carousel .owl-carousel .slide .owl-item img {
+  height: 350px;
+  width: 350px !important;
 }
 
 .block-carousel .navNext,
@@ -745,11 +727,20 @@ body {
   cursor: pointer;
 }
 
+.video__button button:hover {
+  background-color: #b51d3b;
+  color: #F3F3F3;
+  -webkit-transition: 0.1s background-color;
+  transition: 0.1s background-color;
+  -webkit-transition: 0.1s color;
+  transition: 0.1s color;
+}
+
 /********** DELIVERY BLOCK **********/
 
 .delivery {
   background-color: #ede3d5;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
 }
 
 .delivery .wrapper {
@@ -773,9 +764,11 @@ body {
   font-family: Circe Bold;
   font-weight: 900;
   padding: 30px 0;
+  margin-bottom: 70px;
 }
 
 .delivery__item {
+  text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 15px;
@@ -783,7 +776,6 @@ body {
   word-wrap: break-word;
   width: -webkit-calc(33.333333333333336% - 30px);
   width: calc(33.333333333333336% - 30px);
-  text-align: center;
 }
 
 .delivery__item h3 {
@@ -800,7 +792,7 @@ body {
 /********** PRESENT BLOCK **********/
 
 .present {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .present h1 {
@@ -845,6 +837,7 @@ body {
   width: -webkit-calc(83.33333333333334% - 30px);
   width: calc(83.33333333333334% - 30px);
   font-size: 20px;
+  margin-top: 50px;
 }
 
 .present .content p span {
@@ -925,12 +918,16 @@ body {
   margin: 0 auto;
 }
 
+.why-us__content .icon1 {
+  background-position: -3px;
+}
+
 .why-us__content .icon2 {
-  background-position: -110px;
+  background-position: -113px;
 }
 
 .why-us__content .icon3 {
-  background-position: -220px;
+  background-position: -221px;
 }
 
 /********** REVIEWS BLOCK **********/
@@ -1001,6 +998,11 @@ body {
   width: calc(33.333333333333336% - 30px);
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  height: 100%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
 }
 
 .reviews .reviews__block .slide p {
@@ -1094,6 +1096,7 @@ body {
 }
 
 .danger__article h1 {
+  max-width: 100%;
   font-size: 38px;
   text-transform: uppercase;
   font-weight: 600;
@@ -1111,6 +1114,11 @@ body {
   word-wrap: break-word;
   width: -webkit-calc(33.333333333333336% - 30px);
   width: calc(33.333333333333336% - 30px);
+}
+
+.danger__left img {
+  max-width: 100%;
+  height: 100%;
 }
 
 .danger__right {
@@ -1163,6 +1171,10 @@ body {
   margin-top: -8px;
 }
 
+.last-block .call-to-action__first__discount img {
+  max-width: 100%;
+}
+
 .last-block .call-to-action__first__pricelist {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1195,6 +1207,7 @@ body {
   width: calc(50% - 30px);
   text-align: center;
   color: #fff;
+  margin-top: auto;
 }
 
 .last-block .call-to-action__first__pricelist .cena {
@@ -1413,7 +1426,7 @@ footer .foot p {
   margin-left: -300px;
   display: none;
   opacity: 0;
-  z-index: 9999;
+  z-index: 9999 !important;
   padding: 20px 10px;
 }
 
@@ -1452,6 +1465,63 @@ footer .foot p {
 }
 
 /***** ADAPTIVE 1200px *****/
+
+.sendmail {
+  background-color: crimson;
+  font-family: Circe;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sendmail div {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.sendmail div .thanks {
+  font-size: 40px;
+  color: #fff;
+}
+
+.sendmail div .operator {
+  margin-top: 30px;
+  font-size: 26px;
+  color: #fff;
+}
+
+.sendmail div .back_home {
+  margin-top: 50px;
+  color: #CFCFCF;
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: Circe;
+  src: url("../fonts/Circe-Regular.woff");
+}
+
+@font-face {
+  font-family: Circe Bold;
+  src: url("../fonts/Circe-Bold.woff");
+}
+
+@font-face {
+  font-family: Circe ExtraBold;
+  src: url("../fonts/Circe-ExtraBold.woff");
+}
 
 @media screen and (max-width: 1200px) {
   .main-offer__propose {
@@ -1667,6 +1737,13 @@ footer .foot p {
   }
 }
 
+@media screen and (max-width: 610px) {
+  .advantages__both__first__top,
+  .advantages__both__second__top {
+    height: 330px;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .main-offer__propose_watch-block {
     width: -webkit-calc(100% - 30px);
@@ -1813,6 +1890,12 @@ footer .foot p {
     height: 250px;
   }
 
+  .advantages__both__first__top,
+  .advantages__both__second__top {
+    height: auto;
+    margin-bottom: 30px;
+  }
+
   .characteristics {
     text-align: center;
   }
@@ -1858,8 +1941,8 @@ footer .foot p {
 
   .last-block .call-to-action__second img {
     margin: 30px auto;
-    width: 250px;
-    height: 250px;
+    max-width: 100%;
+    height: 100%;
   }
 
   .last-block .call-to-action__third {
@@ -1868,5 +1951,59 @@ footer .foot p {
 
   .watches img {
     width: 85%;
+  }
+
+  #politice {
+    overflow-y: scroll;
+    width: 100px;
+    height: 300px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    border: 3px #000 solid;
+    background: #fff;
+    position: fixed;
+    top: 45%;
+    left: 30%;
+    margin-top: -150px;
+    margin-left: -50px;
+    display: none;
+    opacity: 0;
+    z-index: 9999 !important;
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #politice {
+    overflow-y: scroll;
+    width: 90% !important;
+    max-width: 100% !important;
+    height: 300px;
+    top: 45%;
+    left: 0;
+    margin-left: 0;
+  }
+
+  #politice h1 {
+    font-size: 25px;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .danger__article h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-offer__pricelist__price__sale__old-price .cena span {
+    margin-top: -23px;
+    margin-left: -35px;
+    width: 70px;
+  }
+
+  .main-offer__pricelist__timer {
+    margin-left: -25px;
   }
 }
