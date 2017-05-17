@@ -1,0 +1,154 @@
+.form-mob {
+  width: 100%;
+  background: url("../img/doski.jpg");
+  background-size: cover;
+  margin-top: 15px;
+  padding: 20px 0;
+  margin-bottom: -30px;
+}
+
+.offer-form {
+  text-align: center;
+}
+
+.offer-form .offer-input {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  border: 2px white solid;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+}
+
+.offer-form button {
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  width: 86%;
+  background-color: crimson;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.offer-form button:hover {
+  background-color: #b51d3b;
+  color: #F3F3F3;
+  -webkit-transition: 0.5s background-color;
+  transition: 0.5s background-color;
+  -webkit-transition: 0.1s color;
+  transition: 0.1s color;
+}
+
+@media screen and (min-width: 560px) {
+  .visible-xs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .main-offer__pricelist__price__sale__old-price b,
+  .main-offer__pricelist__price__sale__new-price b {
+    font-weight: normal !important;
+    display: none;
+    padding-top: 30px;
+  }
+
+  .call-to-action__first__pricelist__new-price b,
+  .call-to-action__first__pricelist__old-price b {
+    font-weight: normal !important;
+    display: none;
+  }
+
+  .call-to-action__first__pricelist__new-price .cena,
+  .call-to-action__first__pricelist__old-price .cena {
+    margin-top: 20px;
+  }
+
+  .offer-now {
+    margin-top: 20px !important;
+  }
+
+  .delivery {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .delivery h1 {
+    padding-bottom: 0px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .delivery__item {
+    margin-top: 10px !important;
+  }
+
+  .why-us {
+    padding-bottom: 10px;
+  }
+
+  .why-us__article {
+    padding: 15px 0 !important;
+  }
+
+  .danger {
+    margin: 20px !important;
+  }
+
+  .danger__article {
+    margin: 0;
+  }
+
+  .danger img {
+    width: 50%;
+    margin-top: 0 !important;
+  }
+
+  .last-block .call-to-action__first__timer {
+    margin-top: 10px !important;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  .last-block {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .last-block .call-to-action {
+    background-color: #787A9D;
+  }
+
+  .last-block .benefits__item img {
+    width: 40px;
+    margin-top: 10px;
+  }
+
+  .video button {
+    width: 84%;
+  }
+
+  .characteristics__first_column,
+  .characteristics__second_column {
+    width: 40% !important;
+  }
+
+  .characteristics__first_column div h4,
+  .characteristics__first_column div h6,
+  .characteristics__second_column div h4,
+  .characteristics__second_column div h6 {
+    text-align: left;
+  }
+
+  .offer-form button {
+    font-size: 18px;
+  }
+}

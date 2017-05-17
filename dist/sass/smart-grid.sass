@@ -104,6 +104,9 @@ $break_xs: 560px
     padding-right: 15px
     word-wrap: break-word
 
+=col-0()
+    display: none
+
 =col-1()
     width: #{calc(8.333333333333334% - #{$offset})}
 
@@ -204,6 +207,10 @@ $break_xs: 560px
 
 =float($value)
     float: $value
+
+=col-lg-0()
+    @media screen and (max-width: $break_lg)
+        display: none
 
 =col-lg-1()
     @media screen and (max-width: $break_lg)
@@ -372,6 +379,9 @@ $break_xs: 560px
     @media screen and (max-width: $break_lg)
         #{$name}: $value
     
+=col-md-0()
+    @media screen and (max-width: $break_md)
+        display: none
 
 =col-md-1()
     @media screen and (max-width: $break_md)
@@ -540,6 +550,9 @@ $break_xs: 560px
     @media screen and (max-width: $break_md)
         #{$name}: $value
     
+=col-sm-0()
+    @media screen and (max-width: $break_sm)
+        display: none
 
 =col-sm-1()
     @media screen and (max-width: $break_sm)
@@ -708,6 +721,9 @@ $break_xs: 560px
     @media screen and (max-width: $break_sm)
         #{$name}: $value
     
+=col-xs-0()
+    @media screen and (max-width: $break_xs)
+        display: none
 
 =col-xs-1()
     @media screen and (max-width: $break_xs)

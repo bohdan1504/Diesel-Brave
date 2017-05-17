@@ -3,6 +3,54 @@
   display: none;
 }
 
+.form-mob {
+  width: 100%;
+  background: url("../img/doski.jpg");
+  background-size: cover;
+  margin-top: 15px;
+  padding: 20px 0;
+  margin-bottom: -30px;
+}
+
+.offer-form {
+  text-align: center;
+}
+
+.offer-form .offer-input {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  border: 2px white solid;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+}
+
+.offer-form button {
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  width: 86%;
+  background-color: crimson;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.offer-form button:hover {
+  background-color: #b51d3b;
+  color: #F3F3F3;
+  -webkit-transition: 0.5s background-color;
+  transition: 0.5s background-color;
+  -webkit-transition: 0.1s color;
+  transition: 0.1s color;
+}
+
 body,
 div,
 dl,
@@ -204,6 +252,10 @@ body {
           flex-wrap: wrap;
 }
 
+.main-offer .only-xs {
+  display: none;
+}
+
 .main-offer__text {
   font-size: 32px;
   display: -webkit-box;
@@ -239,6 +291,10 @@ body {
 
 .main-offer__text b {
   margin-left: 7px;
+}
+
+.main-offer__text p {
+  display: none;
 }
 
 .main-offer__propose {
@@ -485,7 +541,7 @@ body {
 
 .advantages__both__first h3,
 .advantages__both__second h3 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 900;
   font-family: Circe ExtraBold;
   margin-top: auto;
@@ -493,6 +549,7 @@ body {
 
 .advantages__both__first p,
 .advantages__both__second p {
+  font-size: 16px;
   width: 85%;
   margin: auto;
 }
@@ -538,7 +595,7 @@ body {
 
 .characteristics h1 {
   font-family: Circe ExtraBold;
-  font-size: 40px;
+  font-size: 32px;
   text-align: center;
   width: 100%;
   margin-bottom: 30px;
@@ -565,14 +622,13 @@ body {
 .characteristics__second_column div h4 {
   font-family: Circe ExtraBold;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .characteristics__first_column div h6,
 .characteristics__second_column div h6 {
-  font-size: 18px;
-  margin-left: 17px;
-  margin-top: -5px;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .characteristics__slider {
@@ -674,7 +730,7 @@ body {
 
 .video h1 {
   color: #fff;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 500;
   font-family: Circe;
   text-align: center;
@@ -691,20 +747,30 @@ body {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .video__playback iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  top: 5%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
 }
 
 .video__button {
-  margin-top: 30px;
+  margin-top: -80px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -722,7 +788,7 @@ body {
   background-color: crimson;
   outline: none;
   border: none;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 900;
   cursor: pointer;
 }
@@ -740,7 +806,7 @@ body {
 
 .delivery {
   background-color: #ede3d5;
-  padding-bottom: 150px;
+  padding-bottom: 70px;
 }
 
 .delivery .wrapper {
@@ -759,12 +825,12 @@ body {
 
 .delivery h1 {
   width: 100%;
-  font-size: 40px;
+  font-size: 32px;
   text-align: center;
   font-family: Circe Bold;
   font-weight: 900;
   padding: 30px 0;
-  margin-bottom: 70px;
+  margin-bottom: 0px;
 }
 
 .delivery__item {
@@ -785,7 +851,7 @@ body {
 }
 
 .delivery__item p {
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 20px;
 }
 
@@ -796,7 +862,7 @@ body {
 }
 
 .present h1 {
-  font-size: 40px;
+  font-size: 32px;
   text-align: center;
   font-family: Circe Bold;
   font-weight: 700;
@@ -834,8 +900,8 @@ body {
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: -webkit-calc(83.33333333333334% - 30px);
-  width: calc(83.33333333333334% - 30px);
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px);
   font-size: 20px;
   margin-top: 50px;
 }
@@ -861,13 +927,13 @@ body {
 }
 
 .why-us__article h1 {
-  font-size: 33px;
+  font-size: 32px;
   font-family: Circe Bold;
   text-transform: uppercase;
 }
 
 .why-us__article h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .why-us__content {
@@ -897,7 +963,7 @@ body {
 }
 
 .why-us__content__item h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-family: Circe Bold;
   padding-top: 20px;
   text-transform: uppercase;
@@ -905,7 +971,7 @@ body {
 
 .why-us__content__item p {
   margin: 10px auto;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .why-us__content .icon1,
@@ -936,16 +1002,25 @@ body {
   color: #fff;
   font-size: 20px;
   padding-bottom: 30px;
-  background: url(../img/bg3.jpg) no-repeat;
+  background: url(../img/bg3.jpg);
   background-attachment: fixed;
   background-size: 100% 100%;
+}
+
+.reviews .add-review {
+  width: 100%;
+  text-align: center;
+}
+
+.reviews .add-review a {
+  color: #9D9D9D;
 }
 
 .reviews h1 {
   text-align: center;
   color: #fff;
   width: 100%;
-  font-size: 40px;
+  font-size: 32px;
   font-family: Circe ExtraBold;
   padding: 30px 0;
 }
@@ -1013,7 +1088,7 @@ body {
   word-wrap: break-word;
   width: -webkit-calc(66.66666666666667% - 30px);
   width: calc(66.66666666666667% - 30px);
-  font-size: 20px;
+  font-size: 16px;
   color: #D8D8D8;
 }
 
@@ -1097,7 +1172,7 @@ body {
 
 .danger__article h1 {
   max-width: 100%;
-  font-size: 38px;
+  font-size: 32px;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -1129,6 +1204,10 @@ body {
   word-wrap: break-word;
   width: -webkit-calc(66.66666666666667% - 30px);
   width: calc(66.66666666666667% - 30px);
+}
+
+.danger__right p {
+  font-size: 16px;
 }
 
 /********** LAST BLOCK **********/
@@ -1216,7 +1295,7 @@ body {
   text-align: center;
   -webkit-border-radius: 30px;
           border-radius: 30px;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .last-block .call-to-action__first__pricelist__new-price .cena {
@@ -1247,7 +1326,7 @@ body {
   text-align: center;
   margin-left: 12px;
   margin-bottom: 10px;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -1289,17 +1368,17 @@ body {
   width: calc(33.333333333333336% - 30px);
 }
 
-.last-block .call-to-action__third form {
+.last-block .call-to-action__third .hidden-xs {
   margin-top: 30px;
   width: 90%;
 }
 
-.last-block .call-to-action__third form label {
+.last-block .call-to-action__third .hidden-xs label {
   font-weight: 900;
   font-size: 20px;
 }
 
-.last-block .call-to-action__third form input {
+.last-block .call-to-action__third .hidden-xs input {
   width: 100%;
   -webkit-border-radius: 2px;
           border-radius: 2px;
@@ -1310,11 +1389,11 @@ body {
   font-family: Circe;
 }
 
-.last-block .call-to-action__third form .offer-now {
+.last-block .call-to-action__third .hidden-xs .offer-now {
   margin-top: 20px;
 }
 
-.last-block .call-to-action__third form .offer-now button {
+.last-block .call-to-action__third .hidden-xs .offer-now button {
   text-transform: uppercase;
   padding: 10px;
   color: #fff;
@@ -1324,12 +1403,12 @@ body {
   background-color: crimson;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
   cursor: pointer;
 }
 
-.last-block .call-to-action__third form .offer-now button:hover {
+.last-block .call-to-action__third .hidden-xs .offer-now button:hover {
   background-color: #b51d3b;
   color: #F3F3F3;
   -webkit-transition: 0.5s background-color;
@@ -1338,7 +1417,8 @@ body {
   transition: 0.1s color;
 }
 
-.last-block .call-to-action__third form .offer-now p {
+.last-block .call-to-action__third .hidden-xs .offer-now p {
+  font-size: 16px;
   margin-top: 10px;
 }
 
@@ -1379,6 +1459,12 @@ body {
   margin-left: 10px;
   color: #fff;
   font-size: 22px;
+  line-height: 18px;
+}
+
+.last-block .benefits__item img {
+  width: 50px;
+  margin-top: 10px;
 }
 
 /***** FOOTER BLOCK *****/
@@ -1407,8 +1493,17 @@ footer .foot h2 {
   font-size: 22px;
 }
 
+footer .foot h2 br {
+  display: none;
+}
+
 footer .foot p {
-  font-size: 18px;
+  font-size: 16px;
+}
+
+footer .foot a {
+  color: #ADADAD;
+  text-decoration: none;
 }
 
 #politice {
@@ -1431,12 +1526,12 @@ footer .foot p {
 }
 
 #politice h1 {
-  font-size: 30px;
+  font-size: 28px;
   text-align: center;
 }
 
 #politice p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #politice #modal_close {
@@ -1521,6 +1616,12 @@ footer .foot p {
 @font-face {
   font-family: Circe ExtraBold;
   src: url("../fonts/Circe-ExtraBold.woff");
+}
+
+@media screen and (min-width: 560px) {
+  .visible-xs {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1745,24 +1846,159 @@ footer .foot p {
 }
 
 @media screen and (max-width: 560px) {
-  .main-offer__propose_watch-block {
+  .main-offer__pricelist__price__sale__old-price b,
+  .main-offer__pricelist__price__sale__new-price b {
+    font-weight: normal !important;
+    display: none;
+    padding-top: 30px;
+  }
+
+  .call-to-action__first__pricelist__new-price b,
+  .call-to-action__first__pricelist__old-price b {
+    font-weight: normal !important;
+    display: none;
+  }
+
+  .call-to-action__first__pricelist__new-price .cena,
+  .call-to-action__first__pricelist__old-price .cena {
+    margin-top: 20px;
+  }
+
+  .offer-now {
+    margin-top: 20px !important;
+  }
+
+  .delivery {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .delivery h1 {
+    padding-bottom: 0px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .delivery__item {
+    margin-top: 10px !important;
+  }
+
+  .why-us {
+    padding-bottom: 10px;
+  }
+
+  .why-us__article {
+    padding: 15px 0 !important;
+  }
+
+  .danger {
+    margin: 20px !important;
+  }
+
+  .danger__article {
+    margin: 0;
+  }
+
+  .danger img {
+    width: 50%;
+    margin-top: 0 !important;
+  }
+
+  .last-block .call-to-action__first__timer {
+    margin-top: 10px !important;
+  }
+
+  .hidden-xs {
+    display: none;
+  }
+
+  .last-block {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .last-block .call-to-action {
+    background-color: #787A9D;
+  }
+
+  .last-block .benefits__item img {
+    width: 40px;
+    margin-top: 10px;
+  }
+
+  .video button {
+    width: 84%;
+  }
+
+  .characteristics__first_column,
+  .characteristics__second_column {
+    width: 40% !important;
+  }
+
+  .characteristics__first_column div h4,
+  .characteristics__first_column div h6,
+  .characteristics__second_column div h4,
+  .characteristics__second_column div h6 {
+    text-align: left;
+  }
+
+  .offer-form button {
+    font-size: 18px;
+  }
+
+  .main-offer .p_hide {
+    display: none;
+  }
+
+  .main-offer .p_show {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    line-height: 24px;
+  }
+
+  .main-offer .p_show span {
+    font-size: 26px;
+    display: inline-block;
+  }
+
+  .only-xs {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .only-xs img {
+    width: 95%;
+  }
+
+  .main-offer__propose {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
+  }
+
+  .main-offer__propose_watch-block {
+    display: none;
   }
 
   .main-offer__propose_plus-insert {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
+    display: none;
   }
 
   .main-offer__propose_portmone {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
+    display: none;
   }
 
   .main-offer__pricelist {
     width: -webkit-calc(83.33333333333334% - 30px);
     width: calc(83.33333333333334% - 30px);
+  }
+
+  .advantages__both__third img {
+    width: 50% !important;
+    height: 50% !important;
   }
 
   .advantages__both__first,
@@ -1771,15 +2007,39 @@ footer .foot p {
     width: calc(100% - 30px);
   }
 
+  .advantages__both__first h3,
+  .advantages__both__second h3 {
+    font-size: 22px;
+  }
+
+  .advantages__both__first p,
+  .advantages__both__second p {
+    font-size: 14px;
+  }
+
   .advantages__both__third {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
   }
 
+  .characteristics h1 {
+    font-size: 26px;
+  }
+
   .characteristics__first_column,
   .characteristics__second_column {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
+  .characteristics__first_column div h4,
+  .characteristics__second_column div h4 {
+    font-size: 18px;
+  }
+
+  .characteristics__first_column div h6,
+  .characteristics__second_column div h6 {
+    font-size: 16px;
   }
 
   .characteristics__slider {
@@ -1787,9 +2047,37 @@ footer .foot p {
     width: calc(83.33333333333334% - 30px);
   }
 
+  .video h1 {
+    font-size: 26px;
+  }
+
+  .video__button button {
+    font-size: 20px;
+  }
+
+  .delivery h1 {
+    font-size: 26px;
+  }
+
   .delivery__item {
     width: -webkit-calc(58.333333333333336% - 30px);
     width: calc(58.333333333333336% - 30px);
+  }
+
+  .delivery__item h3 {
+    font-size: 20px;
+  }
+
+  .delivery__item p {
+    font-size: 14px;
+  }
+
+  .present {
+    display: none;
+  }
+
+  .present h1 {
+    font-size: 26px;
   }
 
   .present .content img {
@@ -1797,19 +2085,51 @@ footer .foot p {
     width: calc(66.66666666666667% - 30px);
   }
 
+  .why-us__article h1 {
+    font-size: 26px;
+  }
+
+  .why-us__article h3 {
+    font-size: 18px;
+  }
+
   .why-us__content__item {
     width: -webkit-calc(66.66666666666667% - 30px);
     width: calc(66.66666666666667% - 30px);
   }
 
+  .why-us__content__item h3 {
+    font-size: 16px;
+  }
+
+  .why-us__content__item p {
+    font-size: 14px;
+  }
+
+  .reviews h1 {
+    font-size: 26px;
+  }
+
   .reviews .reviews__block .slide img {
-    width: -webkit-calc(66.66666666666667% - 30px);
-    width: calc(66.66666666666667% - 30px);
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
   }
 
   .reviews .reviews__block .slide p {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
+  }
+
+  .reviews .reviews__block .slide p {
+    font-size: 14px;
+  }
+
+  .danger__article h1 {
+    font-size: 26px;
+  }
+
+  .danger__right p {
+    font-size: 14px;
   }
 
   .last-block .call-to-action__first {
@@ -1819,8 +2139,17 @@ footer .foot p {
 
   .last-block .call-to-action__first__pricelist__old-price,
   .last-block .call-to-action__first__pricelist__new-price {
-    width: -webkit-calc(66.66666666666667% - 30px);
-    width: calc(66.66666666666667% - 30px);
+    font-size: 18px;
+  }
+
+  .last-block .call-to-action__first__pricelist__old-price,
+  .last-block .call-to-action__first__pricelist__new-price {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
+  .last-block .call-to-action__first__timer h2 {
+    font-size: 20px;
   }
 
   .last-block .call-to-action__second {
@@ -1833,9 +2162,37 @@ footer .foot p {
     width: calc(66.66666666666667% - 30px);
   }
 
+  .last-block .call-to-action__third .hidden-xs .offer-now button {
+    font-size: 18px;
+  }
+
+  .last-block .call-to-action__third .hidden-xs .offer-now p {
+    font-size: 14px;
+  }
+
   .last-block .benefits__item {
-    width: -webkit-calc(83.33333333333334% - 30px);
-    width: calc(83.33333333333334% - 30px);
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  .last-block .benefits__item p {
+    font-size: 18px;
+  }
+
+  footer .foot h2 {
+    font-size: 18px;
+  }
+
+  footer .foot p {
+    font-size: 14px;
+  }
+
+  #politice h1 {
+    font-size: 24px;
+  }
+
+  #politice p {
+    font-size: 14px;
   }
 
   .main-offer .wrapper {
@@ -1909,6 +2266,10 @@ footer .foot p {
     margin: 60px auto 0 auto;
   }
 
+  .video__button {
+    margin-top: -50px;
+  }
+
   .delivery h1 {
     padding-bottom: -30px !important;
   }
@@ -1939,10 +2300,8 @@ footer .foot p {
     text-align: center;
   }
 
-  .last-block .call-to-action__second img {
-    margin: 30px auto;
-    max-width: 100%;
-    height: 100%;
+  .last-block .call-to-action__second {
+    display: none;
   }
 
   .last-block .call-to-action__third {
@@ -1971,9 +2330,22 @@ footer .foot p {
     z-index: 9999 !important;
     padding: 20px 10px;
   }
+
+  footer .foot h2 br {
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .main-offer .offer-now button {
+    font-size: 16px;
+  }
+
+  .video__button {
+    max-width: 320px;
+    margin-top: -30px;
+  }
+
   #politice {
     overflow-y: scroll;
     width: 90% !important;

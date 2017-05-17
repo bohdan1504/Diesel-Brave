@@ -1,0 +1,132 @@
+$color-red: crimson
+$h1: 38px
+$h2: 34px
+$h3: 30px
+$h4: 26px
+$h5: 22px
+$h6: 18px
+$p: 16px
+
+
+=h1()
+	@media screen and (max-width: 560px)
+		font-size: 26px
+
+=h2()
+	@media screen and (max-width: 560px)
+		font-size: 24px
+
+=h3()
+	@media screen and (max-width: 560px)
+		font-size: 22px
+
+=h4()
+	@media screen and (max-width: 560px)
+		font-size: 20px
+
+=h5()
+	@media screen and (max-width: 560px)
+		font-size: 18px
+
+=h6()
+	@media screen and (max-width: 560px)
+		font-size: 16px
+	
+=p()
+	@media screen and (max-width: 560px)
+		font-size: 14px
+@media screen and (max-width: 560px)
+	.main-offer__pricelist__price__sale__old-price, .main-offer__pricelist__price__sale__new-price
+		b
+			font-weight: normal !important
+			display: none
+			padding-top: 30px
+	.call-to-action__first__pricelist__new-price, .call-to-action__first__pricelist__old-price
+		b
+			font-weight: normal !important
+			display: none
+		.cena
+			margin-top: 20px
+	.offer-now
+		margin-top: 20px !important
+	.delivery
+		padding: 0
+		padding-bottom: 20px
+		h1
+			padding-bottom: 0px !important
+			margin-bottom: 20px !important
+		&__item
+			margin-top: 10px !important
+	.why-us
+		padding-bottom: 10px
+		&__article
+			padding: 15px 0 !important
+	.danger
+		margin: 20px !important
+		&__article
+			margin: 0
+		img
+			width: 50%
+			margin-top: 0 !important
+	.last-block .call-to-action__first__timer
+		margin-top: 10px !important
+	.hidden-xs
+		display: none
+	.last-block
+		background-color: transparent
+		padding: 0
+		.call-to-action
+			background-color: #787A9D
+		.benefits__item
+			img
+				width: 40px
+				margin-top: 10px
+	.video
+		button
+			width: 84%
+	.characteristics
+		&__first_column, &__second_column
+			width: 40% !important
+			div
+				h4, h6
+					text-align: left
+@media screen and (min-width: 560px)
+	.visible-xs
+		display: none
+
+
+.form-mob
+	width: 100%
+	background: url('../img/doski.jpg')
+	background-size: cover
+	margin-top: 15px
+	padding: 20px 0
+	margin-bottom: -30px
+.offer-form
+	text-align: center
+	.offer-input
+		margin-top: 10px
+		padding: 10px
+		text-align: center
+		width: 80%
+		border: 2px white solid
+		border-radius: 15px
+	button
+		text-transform: uppercase
+		padding: 10px
+		margin-top: 10px 
+		color: #fff
+		border-radius: 15px
+		width: 86%
+		background-color: $color-red
+		outline: none
+		border: none
+		@include h5()
+		font-weight: 900
+		cursor: pointer
+		&:hover
+			background-color: #b51d3b
+			color: #F3F3F3
+			transition: 0.5s background-color
+			transition: 0.1s color
+

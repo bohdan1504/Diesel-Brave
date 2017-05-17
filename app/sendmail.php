@@ -1,7 +1,7 @@
 <?
 if(isset($_POST['name'])&&isset($_POST['phone'])){
-  $to = 'bandrashko1@gmail.com';
-  $subject = 'Заявка с сайта Antio';
+  $to = 'info.brave0@gmail.com';
+  $subject = 'Заявка с сайта SalesManiya.ru';
   $message = '
   <html>
   <head>
