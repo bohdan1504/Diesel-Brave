@@ -65,8 +65,9 @@
 					<div class="main-offer__pricelist__price__sale">
 						<div class="main-offer__pricelist__price__sale__old-price">
 							<b>старая цена</b>
-							<div class="cena">5990р 
-								<span class="cross"></span></div>
+							<div class="cena" style="text-decoration: line-through; color: crimson">
+							<span style="color: black;">5990р</span>
+							</div>
 							</div>	
 							<div class="main-offer__pricelist__price__sale__new-price">
 								<b>
@@ -189,7 +190,7 @@
 				<!-- <div class="video__bg"></div> -->
 				<h1 class="wow fadeInLeft hidden-xs" data-wow-duration="1.5s" data-wow-delay="0.2s"">Часы <b>Diesel Brave</b> - стильный аксессуар с историей</h1>
 				<h1 class="visible-xs">ВИДЕО-ОБЗОР</h1>
-				<div class="video__playback  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">\
+				<div class="video__playback  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.2s">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/6a5BKUH-ONU" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="video__button wow fadeInLeft" id="offer-now2" data-wow-duration="1.5s" data-wow-delay="0.3s">
@@ -233,7 +234,7 @@
 
 		<div class="wrapper"> <!-- start wrapper -->
 			<div class="present">
-				<h1 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">Превосходный подарок дорогому человеку или самому себе</h1>
+				<h1 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">Превосходный подарок дорогому человеку <br> или самому себе</h1>
 				<div class="content">
 					<img src="img/present_box.jpg" alt="Подарок часов" class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
 					<p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"><span>Качественные часы</span> -  это прекрасный подарок, пользующийся все большей популярностью во многих странах мира. На данный момент бренд <b>Diesel Brave</b> пользуется достаточной известностью. <br>
@@ -300,6 +301,15 @@
 						</div>
 					</div>
 				</div>
+				<div class="add-review"><a href="#" id="add-review">Добавить отзыв</a></div>
+				<div class="review-form">
+					<form action="review.php" method="POST">
+						<input type="text" placeholder="Ваше имя" name="review-name" required=""><br>
+						<textarea name="review-text" placeholder="Ваш отзыв" required=""></textarea><br>
+						<button>Оставить отзыв</button>
+					</form>
+					<span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+				</div>
 			</div>
 		</div> <!-- end wrapper -->
 
@@ -330,15 +340,14 @@
 								<b>
 									старая цена
 								</b>
-								<div class="cena">5990р
-									<span class="cross"></span>
+								<div class="cena" style="text-decoration: line-through; color: crimson"><span style="color: black;">5990р</span>
 								</div>
 							</div>	
 							<div class="call-to-action__first__pricelist__new-price">
 								<b>
 									новая цена
 								</b>
-								<div class="cena">2197р.</div>
+								<div class="cena">2197р</div>
 							</div>	
 						</div>
 						<div class="call-to-action__first__timer">
@@ -349,7 +358,6 @@
 					<div class="call-to-action__second wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
 						<img src="img/watch.png" alt="Часы">
 					</div>
-					<div class="col-2"></div>
 					<div class="call-to-action__third wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
 
 						<form action="sendmail.php" method="POST" class="hidden-xs">
@@ -363,7 +371,7 @@
 							</div>
 						</form>
 					</div> <!-- end wrapper -->
-						<div class="form-mob visible-xs">
+					<div class="form-mob visible-xs">
 						<form action="sendmail.php" method="POST" class=" offer-form">
 							<input type="text" name="name" id="name" required="" placeholder="Как Вас зовут?" class="offer-input"><br>
 							<input type="tel" name="phone" id="phone" required="" placeholder="Ваш телефон" class="offer-input">
@@ -371,7 +379,7 @@
 								<a href="#"><button>оставить заявку</button></a><br>
 							</div>
 						</form>
-						</div>
+					</div>
 					<div class="wrapper">
 
 
@@ -384,7 +392,7 @@
 					</div>
 					<div class="benefits__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
 						<img src="img/benefit2.png" alt="Никакой предоплаты! Оплата при получении">
-						<p>Никакой предоплаты!Оплата при получении
+						<p>Никакой предоплаты! Оплата при получении
 						</p>
 					</div>
 					<div class="benefits__item wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
@@ -397,9 +405,9 @@
 	</div>
 
 	<footer>
-		<div class="foot">
-			<h2 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">ООО "Гермес" ИНН 5262282211 ОГРН 1125462012290</h2>
-			<a href="#" class="go"><p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Политика конфеденциальности</p></a>
+		<div class="foot wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+			<h2 class="wow fadeInLeft">ООО "Гермес" ИНН 5262282211 <br> ОГРН 1125462012290</h2>
+			<a href="#" class="policy"><p>Политика конфеденциальности</p></a>
 		</div>
 	</footer>
 
@@ -410,8 +418,6 @@
 		<span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
 	</div>
 	<div id="overlay"></div><!-- Пoдлoжкa -->
-
-
 
 
 

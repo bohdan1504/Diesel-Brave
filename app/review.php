@@ -1,19 +1,19 @@
 <?
-if(isset($_POST['name'])&&isset($_POST['phone'])){
-  $to = 'bandrashko1@gmail.com';
-  $subject = 'Заявка с сайта Antio';
+if(isset($_POST['review-name'])&&isset($_POST['review-text'])){
+  $to = 'info.brave0@gmail.com'; 
+  $subject = 'Отзыв с сайта SalesManiya.ru';
   $message = '
   <html>
   <head>
     <title>'.$subject.'</title>
   </head>
   <body>
-    <p>Имя: '.htmlspecialchars($_POST['name']).'</p>
-    <p>Телефон: '.htmlspecialchars($_POST['phone']).'</p>
+    <p>Имя: '.htmlspecialchars($_POST['review-name']).'</p>
+    <p>Телефон: '.htmlspecialchars($_POST['review-text']).'</p>
   </body>
   </html>';
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= 'From: antio.adr.com.ua';
+        $headers .= 'From: salesmaniya.ru';
         mail($to, $subject, $message, $headers);
       }
       ?>
@@ -21,13 +21,13 @@ if(isset($_POST['name'])&&isset($_POST['phone'])){
       <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <title>Спасибо!</title>
+        <title>Спасибо за отзыв!</title>
         <link rel="stylesheet" href="css/style.css">
       </head>
       <body class="sendmail">
         <div>
-          <p class="thanks">Спасибо за заказ, <b><? echo ($_POST['name']) ?>!</b></p>
-          <p class="operator">Оператор свяжеться с Вами в ближайшее время.</p>  
+          <p class="thanks">Спасибо за Ваш отзыв, <b><? echo ($_POST['review-name']) ?>!</b></p>
+          <p class="operator">Нам важно Ваше мнение.</p>  
           <a href="index.html">
             <p class="back_home">Вернуться на главную страницу</p>
           </a>

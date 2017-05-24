@@ -10,6 +10,8 @@
 body
 	font-family: Circe
 	overflow-x: hidden
+img
+	max-width: 100%
 
 .wrapper
 	max-width: 1000px
@@ -177,14 +179,14 @@ body
 						color: $color-red
 				&__old-price
 					.cena 
-						span
-							position: absolute
-							background-color: $color-red
-							width: 80px
-							margin-top: 20px
-							margin-left: -85px
-							height: 3px
-							transform: rotate(339.358deg)	
+						// span
+						// 	position: absolute
+						// 	background-color: $color-red
+						// 	width: 80px
+						// 	margin-top: 20px
+						// 	margin-left: -85px
+						// 	height: 3px
+						// 	transform: rotate(339.358deg)	
 		&__timer
 			justify-content: center
 			margin-top: 30px
@@ -291,8 +293,7 @@ body
 				font-weight: 900
 				@include h5()
 			h6
-				@include h6()
-				font-family: 
+				@include h6() 
 				margin-bottom: 5px
 
 
@@ -372,29 +373,28 @@ body
 			font-family: Circe ExtraBold
 	&__playback
 		position: relative
-		padding-bottom: 56.25%
-		padding-top: 25px
-		height: 0
-		width: 100%
+		padding-bottom: 45.25%
+		height: 80%
+		width: 80%
 		margin: 0 auto
 		text-align: center
 		display: flex
 		justify-content: center
 		iframe
 			position: absolute
-			margin: 0 auto
-			top: 5%
-			left: 15%
-			width: 70%
-			height: 70%
+			top: 0
+			left: 0 !important
+			width: 100%
+			height: 100%
 	&__button
 		margin:
-			top: -80px
+			top: 20px
 			left: auto
 			right: auto
 		text-align: center
 		max-width: 400px
 		button
+			margin-top: 3px
 			text-transform: uppercase
 			font-family: Circe ExtraBold
 			width: 100%
@@ -461,12 +461,14 @@ body
 		img
 			@include col()
 			@include col-4()
-			@include col-md-6()
+			@include col-md-4()
+			@include col-sm-8()
 			@include col-xs-8()
 			height: 410px
 		p
 			@include col()
 			@include col-6()
+			@include col-sm-10()
 			font-size: 20px
 			margin-top: 50px
 			span
@@ -519,9 +521,9 @@ body
 		.icon1
 			background-position: -3px
 		.icon2
-			background-position: -113px
-		.icon3
 			background-position: -221px
+		.icon3
+			background-position: -113px
 
 /********** REVIEWS BLOCK **********/
 .reviews
@@ -543,6 +545,7 @@ body
 		@include h1()
 		font-family: Circe ExtraBold
 		padding: 30px 0
+		margin-bottom: 20px
 	&__block
 		display: flex
 		justify-content: center
@@ -564,12 +567,18 @@ body
 				border-radius: 50%
 				height: 100%
 				align-self: center
-			p
+			div
+				font-family: Circe
 				@include col()
 				@include col-8()
 				@include col-xs-12()
-				@include p()
-				color: #D8D8D8
+				.name
+					font-family: Circe Bold
+					color: #fff
+					margin-bottom: 20px
+					@include h4()
+				p
+					@include h6()
 		.navNext, .navPrev
 		  color: #000
 		  font-size: 46px
@@ -603,6 +612,49 @@ body
 				height: 14px
 				opacity: 0.5
 				width: 14px
+
+.review-form
+	background-color: rgba(0,0,0,.45)
+	border: 3px solid $color-red
+	width: 300px
+	height: auto
+	position: fixed
+	top: 45%
+	left: 50%
+	margin-top: -200px
+	margin-left: -150px
+	display: none
+	opacity: 0
+	z-index: 9999
+	padding: 30px 20px
+	text-align: center
+	border-radius: 10px
+	input
+		padding: 5px
+		width: 96%
+	textarea
+		padding: 5px
+		width: 96%
+		height: 200px
+		margin-top: 20px
+	button
+		display: inline-block
+		width: 100%
+		height: 44px
+		text-transform: uppercase
+		margin-top: 15px
+		text-align: center
+		font-size: 20px
+		font-weight: 700
+		color: white
+		display: inline-block
+		background: $color-red
+		white-space: nowrap
+		border: none
+		border-radius: 5px
+		box-shadow: 0 3px 0 rgba(0,0,0,.2)
+		outline: none
+		cursor: pointer
 
 /********** DANGER BLOCK **********/
 .danger
@@ -686,15 +738,15 @@ body
 						color: $color-red
 						font-weight: 900
 						font-family: Circe ExtraBold
-				&__old-price
-					.cross
-						background-color: $color-red
-						margin-top: 19px
-						margin-left: -87px
-						position: absolute
-						width: 80px
-						height: 3px
-						transform: rotate(339.358deg)
+				// &__old-price
+				// 	.cross
+				// 		background-color: $color-red
+				// 		margin-top: 19px
+				// 		margin-left: -87px
+				// 		position: absolute
+				// 		width: 80px
+				// 		height: 3px
+				// 		transform: rotate(339.358deg)
 			&__timer
 				margin-top: 50px
 				margin-left: -10px
@@ -707,28 +759,28 @@ body
 					font-weight: 700					
 		&__second
 			@include col()
-			@include col-2()
-			@include col-lg-6()
-			@include col-xs-8()
-			display: flex
-			img
-				margin-left: 0px
-		.col-2
-			@include col()
-			@include col-2()
-		&__third
-			@include col()
 			@include col-4()
 			@include col-lg-6()
 			@include col-xs-8()
+			display: flex
+			justify-content: center
+			img
+				max-width: 100%
+
+		&__third
+			@include col()
+			@include col-4()
+			@include col-lg-12()
+			@include col-xs-8()
+			display: flex
+			justify-content: center
 			.hidden-xs
 				margin-top: 30px
-				width: 90%
 				label
 					font-weight: 900
 					font-size: 20px
 				input
-					width: 100%
+					width: 90%
 					border-radius: 2px
 					border: none
 					outline: none
@@ -742,7 +794,7 @@ body
 						padding: 10px 
 						color: #fff
 						border-radius: 15px
-						width: 105%
+						width: 94%
 						background-color: $color-red
 						outline: none
 						border: none
@@ -819,16 +871,16 @@ footer
 		text-align: center
 	p
 		@include p()
-	#modal_close
-		width: 21px
-		height: 21px
-		position: fixed
-		color: #fff
-		font-size: 60px
-		top: 30px
-		right: 70px
-		cursor: pointer
-		display: block
+#modal_close
+	width: 21px
+	height: 21px
+	position: fixed
+	color: #fff
+	font-size: 60px
+	top: 30px
+	right: 70px
+	cursor: pointer
+	display: block
 // Пoдлoжкa
 #overlay
 	z-index: 9998
@@ -866,6 +918,15 @@ footer
 		.content
 			p
 				margin-top: 50px
+	.last-block
+		.call-to-action__third
+			input
+				width: 100% !important
+			button
+				width: 104.5% !important
+
+/***** ADAPTIVE 980px *****/
+
 @media screen and (max-width: 980px)	
 	.advantages
 		&__both
@@ -875,6 +936,8 @@ footer
 				justify-content: center
 	.delivery__item
 		margin-top: 30px
+
+/***** ADAPTIVE 780px *****/
 
 @media screen and (max-width: 780px)
 	.main-offer
@@ -905,10 +968,23 @@ footer
 	.last-block .call-to-action__second
 		img
 			width: 100%
-	.wow
+	.wow, .animated
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
 		transition-property: none !important
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
 		transform: none !important
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
 		animation: none !important
+
+/***** ADAPTIVE 560px *****/
 
 @media screen and (max-width: 560px)
 	.main-offer
@@ -934,8 +1010,8 @@ footer
 				p
 					font-size: 36px !important
 		&__pricelist__price__sale__old-price
-			.cross
-				margin-left: 40px
+			// .cross
+			// 	margin-left: 40px
 	.advantages__both
 		&__first
 			margin: 30px auto
@@ -952,11 +1028,16 @@ footer
 		text-align: center
 		&__first_column, &__second_column
 			h4
-				margin-top: 10px			
+				margin-top: 10px
+				word-wrap: normal
+				font-size: 18px !important
+			h6
+				word-wrap: normal
+				font-size: 14px !important
 	.characteristics__slider
 		margin: 60px auto 0 auto
 	.video__button
-		margin-top: -50px
+
 	.delivery
 		h1
 			padding-bottom: -30px !important
@@ -980,14 +1061,15 @@ footer
 					margin-bottom: 30px
 				p
 					text-align: center
+	#modal_close
+		display: none
+	.review-form
+		width: 250px
+		margin-left: -150px
 	.last-block
 		.call-to-action
 			&__second
 				display: none
-				// img
-				// 	margin: 0 auto
-				// 	width: 200px
-				// 	height: 240px
 			&__third
 				width: 80%
 		.benefits__item
@@ -1008,7 +1090,6 @@ footer
 		left: 30%
 		margin-top: -150px
 		margin-left: -50px
-		// тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =)
 		display: none
 		opacity: 0
 		z-index: 9999 !important
@@ -1017,6 +1098,8 @@ footer
 		.foot h2 br
 			display: inline-block
 
+/***** ADAPTIVE 400px *****/
+
 @media screen and (max-width: 400px)
 	.main-offer 
 		.offer-now 
@@ -1024,7 +1107,6 @@ footer
 				font-size: 16px
 	.video__button
 		max-width: 320px
-		margin-top: -30px
 	#politice
 		overflow-y: scroll
 		width: 90% !important
@@ -1036,21 +1118,24 @@ footer
 		h1
 			font-size: 25px
 			word-wrap: break-word
+
+/***** ADAPTIVE 340px *****/
+
 @media screen and (max-width: 340px)
 	.danger
 		&__article
 			h1
-				font-size: 32px
+				font-size: 26px
 			
+/***** ADAPTIVE 320px *****/
+
 @media screen and (max-width: 320px)
-	.main-offer__pricelist__price__sale__old-price 
-		.cena 
-			span
-				margin-top: -23px
-				margin-left: -35px
-				width: 70px
 	.main-offer__pricelist__timer
 		margin-left: -25px
+	.cena
+		span
+			font-size: 28px
+
 
 .sendmail
 	background-color: $color-red
@@ -1072,9 +1157,7 @@ footer
 		.back_home
 			margin-top: 50px
 			color: #CFCFCF
-			text-decoration: underline
-
-
+			text-decoration: underline	
 
 
 @font-face

@@ -161,6 +161,10 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+}
+
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -432,18 +436,6 @@ body {
 
 .main-offer__pricelist__price__sale__new-price .cena {
   color: crimson;
-}
-
-.main-offer__pricelist__price__sale__old-price .cena span {
-  position: absolute;
-  background-color: crimson;
-  width: 80px;
-  margin-top: 20px;
-  margin-left: -85px;
-  height: 3px;
-  -webkit-transform: rotate(339.358deg);
-      -ms-transform: rotate(339.358deg);
-          transform: rotate(339.358deg);
 }
 
 .main-offer__pricelist__timer {
@@ -744,10 +736,9 @@ body {
 
 .video__playback {
   position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-  width: 100%;
+  padding-bottom: 45.25%;
+  height: 80%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   display: -webkit-box;
@@ -762,15 +753,14 @@ body {
 
 .video__playback iframe {
   position: absolute;
-  margin: 0 auto;
-  top: 5%;
-  left: 15%;
-  width: 70%;
-  height: 70%;
+  top: 0;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
 }
 
 .video__button {
-  margin-top: -80px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -778,6 +768,7 @@ body {
 }
 
 .video__button button {
+  margin-top: 3px;
   text-transform: uppercase;
   font-family: Circe ExtraBold;
   width: 100%;
@@ -989,11 +980,11 @@ body {
 }
 
 .why-us__content .icon2 {
-  background-position: -113px;
+  background-position: -221px;
 }
 
 .why-us__content .icon3 {
-  background-position: -221px;
+  background-position: -113px;
 }
 
 /********** REVIEWS BLOCK **********/
@@ -1023,6 +1014,7 @@ body {
   font-size: 32px;
   font-family: Circe ExtraBold;
   padding: 30px 0;
+  margin-bottom: 20px;
 }
 
 .reviews__block {
@@ -1080,7 +1072,8 @@ body {
           align-self: center;
 }
 
-.reviews .reviews__block .slide p {
+.reviews .reviews__block .slide div {
+  font-family: Circe;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 15px;
@@ -1088,8 +1081,17 @@ body {
   word-wrap: break-word;
   width: -webkit-calc(66.66666666666667% - 30px);
   width: calc(66.66666666666667% - 30px);
-  font-size: 16px;
-  color: #D8D8D8;
+}
+
+.reviews .reviews__block .slide div .name {
+  font-family: Circe Bold;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.reviews .reviews__block .slide div p {
+  font-size: 20px;
 }
 
 .reviews .reviews__block .navNext,
@@ -1144,6 +1146,59 @@ body {
   height: 14px;
   opacity: 0.5;
   width: 14px;
+}
+
+.review-form {
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 3px solid crimson;
+  width: 300px;
+  height: auto;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -150px;
+  display: none;
+  opacity: 0;
+  z-index: 9999;
+  padding: 30px 20px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.review-form input {
+  padding: 5px;
+  width: 96%;
+}
+
+.review-form textarea {
+  padding: 5px;
+  width: 96%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.review-form button {
+  display: inline-block;
+  width: 100%;
+  height: 44px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  display: inline-block;
+  background: crimson;
+  white-space: nowrap;
+  border: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
 }
 
 /********** DANGER BLOCK **********/
@@ -1304,18 +1359,6 @@ body {
   font-family: Circe ExtraBold;
 }
 
-.last-block .call-to-action__first__pricelist__old-price .cross {
-  background-color: crimson;
-  margin-top: 19px;
-  margin-left: -87px;
-  position: absolute;
-  width: 80px;
-  height: 3px;
-  -webkit-transform: rotate(339.358deg);
-      -ms-transform: rotate(339.358deg);
-          transform: rotate(339.358deg);
-}
-
 .last-block .call-to-action__first__timer {
   margin-top: 50px;
   margin-left: -10px;
@@ -1336,26 +1379,20 @@ body {
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: -webkit-calc(16.666666666666668% - 30px);
-  width: calc(16.666666666666668% - 30px);
+  width: -webkit-calc(33.333333333333336% - 30px);
+  width: calc(33.333333333333336% - 30px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .last-block .call-to-action__second img {
-  margin-left: 0px;
-}
-
-.last-block .call-to-action .col-2 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: -webkit-calc(16.666666666666668% - 30px);
-  width: calc(16.666666666666668% - 30px);
+  max-width: 100%;
 }
 
 .last-block .call-to-action__third {
@@ -1366,11 +1403,18 @@ body {
   word-wrap: break-word;
   width: -webkit-calc(33.333333333333336% - 30px);
   width: calc(33.333333333333336% - 30px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .last-block .call-to-action__third .hidden-xs {
   margin-top: 30px;
-  width: 90%;
 }
 
 .last-block .call-to-action__third .hidden-xs label {
@@ -1379,7 +1423,7 @@ body {
 }
 
 .last-block .call-to-action__third .hidden-xs input {
-  width: 100%;
+  width: 90%;
   -webkit-border-radius: 2px;
           border-radius: 2px;
   border: none;
@@ -1399,7 +1443,7 @@ body {
   color: #fff;
   -webkit-border-radius: 15px;
           border-radius: 15px;
-  width: 105%;
+  width: 94%;
   background-color: crimson;
   outline: none;
   border: none;
@@ -1534,7 +1578,7 @@ footer .foot a {
   font-size: 16px;
 }
 
-#politice #modal_close {
+#modal_close {
   width: 21px;
   height: 21px;
   position: fixed;
@@ -1560,6 +1604,18 @@ footer .foot a {
 }
 
 /***** ADAPTIVE 1200px *****/
+
+/***** ADAPTIVE 980px *****/
+
+/***** ADAPTIVE 780px *****/
+
+/***** ADAPTIVE 560px *****/
+
+/***** ADAPTIVE 400px *****/
+
+/***** ADAPTIVE 340px *****/
+
+/***** ADAPTIVE 320px *****/
 
 .sendmail {
   background-color: crimson;
@@ -1656,8 +1712,8 @@ footer .foot a {
   }
 
   .last-block .call-to-action__third {
-    width: -webkit-calc(50% - 30px);
-    width: calc(50% - 30px);
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
   }
 }
 
@@ -1696,6 +1752,14 @@ footer .foot a {
 
   .present .content p {
     margin-top: 50px;
+  }
+
+  .last-block .call-to-action__third input {
+    width: 100% !important;
+  }
+
+  .last-block .call-to-action__third button {
+    width: 104.5% !important;
   }
 }
 
@@ -1749,8 +1813,8 @@ footer .foot a {
   }
 
   .present .content img {
-    width: -webkit-calc(50% - 30px);
-    width: calc(50% - 30px);
+    width: -webkit-calc(33.333333333333336% - 30px);
+    width: calc(33.333333333333336% - 30px);
   }
 
   .why-us__content__item {
@@ -1778,6 +1842,16 @@ footer .foot a {
   .characteristics__slider {
     width: -webkit-calc(50% - 30px);
     width: calc(50% - 30px);
+  }
+
+  .present .content img {
+    width: -webkit-calc(66.66666666666667% - 30px);
+    width: calc(66.66666666666667% - 30px);
+  }
+
+  .present .content p {
+    width: -webkit-calc(83.33333333333334% - 30px);
+    width: calc(83.33333333333334% - 30px);
   }
 
   .main-offer__propose_watch-block {
@@ -1827,14 +1901,15 @@ footer .foot a {
     width: 100%;
   }
 
-  .wow {
+  .wow,
+  .animated {
     -webkit-transition-property: none !important;
     transition-property: none !important;
+    -ms-transform: none !important;
     -webkit-transform: none !important;
-        -ms-transform: none !important;
-            transform: none !important;
+    transform: none !important;
     -webkit-animation: none !important;
-            animation: none !important;
+    animation: none !important;
   }
 }
 
@@ -2115,13 +2190,17 @@ footer .foot a {
     width: calc(50% - 30px);
   }
 
-  .reviews .reviews__block .slide p {
+  .reviews .reviews__block .slide div {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
   }
 
-  .reviews .reviews__block .slide p {
-    font-size: 14px;
+  .reviews .reviews__block .slide div .name {
+    font-size: 20px;
+  }
+
+  .reviews .reviews__block .slide div p {
+    font-size: 16px;
   }
 
   .danger__article h1 {
@@ -2232,10 +2311,6 @@ footer .foot a {
     font-size: 36px !important;
   }
 
-  .main-offer__pricelist__price__sale__old-price .cross {
-    margin-left: 40px;
-  }
-
   .advantages__both__first {
     margin: 30px auto;
     width: 70%;
@@ -2260,14 +2335,18 @@ footer .foot a {
   .characteristics__first_column h4,
   .characteristics__second_column h4 {
     margin-top: 10px;
+    word-wrap: normal;
+    font-size: 18px !important;
+  }
+
+  .characteristics__first_column h6,
+  .characteristics__second_column h6 {
+    word-wrap: normal;
+    font-size: 14px !important;
   }
 
   .characteristics__slider {
     margin: 60px auto 0 auto;
-  }
-
-  .video__button {
-    margin-top: -50px;
   }
 
   .delivery h1 {
@@ -2298,6 +2377,15 @@ footer .foot a {
 
   .reviews .owl-carousel .slide p {
     text-align: center;
+  }
+
+  #modal_close {
+    display: none;
+  }
+
+  .review-form {
+    width: 250px;
+    margin-left: -150px;
   }
 
   .last-block .call-to-action__second {
@@ -2343,7 +2431,6 @@ footer .foot a {
 
   .video__button {
     max-width: 320px;
-    margin-top: -30px;
   }
 
   #politice {
@@ -2364,18 +2451,16 @@ footer .foot a {
 
 @media screen and (max-width: 340px) {
   .danger__article h1 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .main-offer__pricelist__price__sale__old-price .cena span {
-    margin-top: -23px;
-    margin-left: -35px;
-    width: 70px;
-  }
-
   .main-offer__pricelist__timer {
     margin-left: -25px;
+  }
+
+  .cena span {
+    font-size: 28px;
   }
 }

@@ -13,7 +13,7 @@ if(isset($_POST['name'])&&isset($_POST['phone'])){
   </body>
   </html>';
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= 'From: antio.adr.com.ua';
+        $headers .= 'From: salesmaniya.ru';
         mail($to, $subject, $message, $headers);
       }
       ?>
